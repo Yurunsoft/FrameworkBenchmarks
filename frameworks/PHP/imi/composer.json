@@ -1,6 +1,6 @@
 {
 	"require": {
-		"yurunsoft/imi": "~1.0"
+		"yurunsoft/imi": "dev-dev"
 	},
     "autoload": {
         "psr-4" : {
