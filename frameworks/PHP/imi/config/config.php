@@ -51,7 +51,7 @@ return [
                         'minResources' => 0,
                         'gcInterval'   => null,
                         'checkStateWhenGetResource' =>  false,
-                        'requestResourceCheckInterval'  =>  60,
+                        'requestResourceCheckInterval'  =>  30,
                     ],
                 ],
                 // resource也可以定义多个连接
@@ -68,7 +68,7 @@ return [
                         'minResources' => 16,
                         'gcInterval'   => null,
                         'checkStateWhenGetResource' =>  false,
-                        'requestResourceCheckInterval'  =>  60,
+                        'requestResourceCheckInterval'  =>  30,
                     ],
                 ],
                 // resource也可以定义多个连接
