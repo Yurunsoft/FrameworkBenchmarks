@@ -26,4 +26,4 @@ RUN curl -sSL https://getcomposer.org/installer | php -- --install-dir=/usr/loca
 RUN composer install --no-dev --classmap-authoritative --quiet > /dev/null
 RUN composer dumpautoload -o
 
-CMD ["service redis-server start", "php vendor/bin/imi server/start"]
+CMD run.sh
