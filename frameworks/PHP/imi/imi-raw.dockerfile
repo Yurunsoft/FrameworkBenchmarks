@@ -15,10 +15,10 @@ RUN apt -yqq install redis-server > /dev/null
 
 RUN echo "zend_extension=opcache.so" >> /usr/local/etc/php/php.ini
 
-WORKDIR /imi
-
 COPY . /imi
 COPY php.ini /usr/local/etc/php/
+
+WORKDIR /imi
 
 RUN chmod -R ug+rwx /imi/.runtime
 
