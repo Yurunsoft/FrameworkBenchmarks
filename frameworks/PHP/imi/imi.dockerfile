@@ -11,8 +11,7 @@ RUN pecl install redis > /dev/null && \
 RUN apt -yqq update > /dev/null && \
     apt -yqq install git unzip > /dev/null
 
-RUN apt -yqq install redis-server > /dev/null && \
-	service redis-server start
+RUN apt -yqq install redis-server > /dev/null
 
 RUN echo "zend_extension=opcache.so" >> /usr/local/etc/php/php.ini
 
@@ -27,4 +26,4 @@ RUN curl -sSL https://getcomposer.org/installer | php -- --install-dir=/usr/loca
 RUN composer install --no-dev --classmap-authoritative --quiet > /dev/null
 RUN composer dumpautoload -o
 
-CMD php vendor/bin/imi server/start
+CMD ["service redis-server start", "php vendor/bin/imi server/start"]
